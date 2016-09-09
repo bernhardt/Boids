@@ -21,6 +21,7 @@
                     <span><img id="OverHeaterL" src="lock.png" /><b> Overheater: </b><div id="OverHeater" style="display:none;">FPS Below 20</div><br /></span>
                     <span><img id="TwoPossibilitiesL" src="lock.png" /><b> TwoPossibilities: </b><div id="TwoPossibilities" style="display:none;">FPS Below 5 (Awful CPU/Awesome Spree)</div><br /></span>
                     <span><img id="BloodLetterL" src="lock.png" /><b> BloodLetter: </b><div id="BloodLetter" style="display:none;">5000 Bloodlets On Screen</div><br /></span>
+                    <span><img id="Over9000L" src="lock.png" /><b> You went over 9000!: </b><div id="Over9000" style="display:none;">9001 Bloodlets On Screen</div><br /></span>
                     <span><img id="VampireL" src="lock.png" /><b> Vampire: </b><div id="Vampire" style="display:none;">20000 Bloodlets On Screen</div><br /></span>
                     <span><img id="DexterL" src="lock.png" /><b> Dexter: </b><div id="Dexter" style="display:none;">50000 Bloodlets On Screen</div><br /></span>
                     <span><img id="SOMUCHBLOODL" src="lock.png" /><b> SOMUCHBLOOD: </b><div id="SOMUCHBLOOD" style="display:none;">70000 Bloodlets On Screen</div><br /></span>
@@ -115,6 +116,7 @@
     var OverHeater = false; //Slow FPS below 20
     var TwoPossibilities = false; //Slow FPS below 50. Possibility 1- Shitty Computer. Possibility 2- Master of all that is Boid
     var BloodLetter = false; //5000 Blood on Screen
+    var Over9000 = false; //9001 Blood on Screen
     var Vampire = false; //20000 Blood on Screen
     var Dexter = false; //50000 Blood on Screen
     var SOMUCHBLOOD = false; //70000 Blood on Screen
@@ -417,6 +419,11 @@
             BloodLetter = true; //5000 Blood on Screen
             document.getElementById("BloodLetter").style.display = "inline";
             document.getElementById("BloodLetterL").src = "unlock.png";
+        }
+        if(numBlood > 9000){ 
+            Over9000 = true; //9001 Blood on Screen
+            document.getElementById("Over9000").style.display = "inline";
+            document.getElementById("Over9000L").src = "unlock.png";
         }
         if(numBlood > 20000){ 
             Vampire = true; //20000 Blood on Screen
